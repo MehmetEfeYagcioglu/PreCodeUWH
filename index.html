@@ -4,50 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ana Sayfa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <style>
-        .wf-force-outline-none[tabindex="-1"]:focus {
-            outline: none;
-        }
-    </style>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Inter:wght@100;400;500;700;900&display=swap');
-
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            /* Yan kaydırma çubuğunu gizle */
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            /* veya scroll */
+
         }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
 
         .top-nav {
             background-color: #ffffff;
             color: #000;
-            padding: 25px 40px;
+            padding: 15px 40px;
             position: fixed;
             top: 0;
-            left: 5%;
+            left: 0;
             width: 100%;
             box-sizing: border-box;
             z-index: 1000;
+            border-bottom: 1px solid #ddd;
         }
 
         .top-nav .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-
-        .top-nav .logo {
-            margin-right: auto;
+            width: 100%;
         }
 
         .top-nav .logo img {
@@ -63,75 +59,61 @@
             gap: 20px;
             justify-content: center;
             flex-grow: 1;
+            position: relative;
         }
 
         .top-nav .nav-links li {
             margin: 0;
+            position: relative;
         }
 
         .top-nav .nav-links a {
             text-decoration: none;
             color: #000;
-            /* Yazı rengini siyah yap */
             font-size: 16px;
             padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 300ms;
-        }
-
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-links li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: black;
-            padding: 5px 10px;
+            transition: color 300ms;
             position: relative;
-            /* Animasyonlu çizgi için gerekli */
-            transition: color 0.3s ease;
-            /* Metin rengi değişimi için animasyon */
         }
 
-        /* Menü ögelerinin üzerine gelindiğinde altına animasyonlu kırmızı çizgi ekliyoruz */
-        .nav-links a::after {
+        .top-nav .nav-links a:hover {
+            color: #800080;
+        }
+
+        .top-nav .nav-links a::after {
             content: "";
             position: absolute;
             left: 0;
-            bottom: 0;
-            width: 0;
+            bottom: -5px;
+            width: 100%;
             height: 2px;
-            background-color: #ff0000;
-            transition: width 0.3s ease;
-            /* Çizgi genişliği değişimi için animasyon */
+            background-color: #800080;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
         }
 
-        /* Hover durumunda çizgi genişliğini 100% yaparak görünür hale getiriyoruz */
-        .nav-links a:hover::after {
-            width: 100%;
+        .top-nav .nav-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
 
         .product {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 10% auto;
+            margin-top: 80px;
             padding: 0 10px;
             text-align: left;
             max-width: 1200px;
+            margin: 80px auto 0;
+            height: 100vh;
         }
 
         .product .text-content {
             max-width: 50%;
             padding-right: 50px;
-            /* Yazılar ile görsel arasına boşluk ekleme */
         }
 
         .product .text-content .big-text {
@@ -141,7 +123,6 @@
             color: #333;
             line-height: 1.2;
             margin: 20px 0;
-            /* Üst ve alt boşluk 20px */
             padding: 0;
             margin-left: 3px;
         }
@@ -163,25 +144,113 @@
             height: auto;
         }
 
-        .btn-danger {
-            font-size: 18px;
-            /* Buton üzerindeki yazı boyutunu artır */
-            padding: 15px 30px;
-            /* Butonun içindeki boşlukları artır */
-            border-radius: 8px;
-            /* Butonun köşelerini yuvarla */
-            text-transform: uppercase;
-            /* Yazıyı büyük harf yap */
-            letter-spacing: 1px;
-            /* Harfler arasında biraz boşluk bırak */
+        .btn-mor {
+            background-color: #800080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        
+
+        .btn-mor:hover {
+            background-color: #6a0dad;
+            transform: scale(1.05);
+        }
+
+        .help {
+            background-color: #c0c0c0;
+            width: 100%;
+            height: 260vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 50px 0;
+            text-align: left;
+        }
+
+        .text-content1 {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .text-content1 .big-text1 {
+            font-size: 65px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.2;
+            margin: 30px 0;
+        }
+
+        .text-content1 .small-text1 {
+            font-size: 30px;
+            margin-top: -300px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        .help .row img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            padding: 80px;
+        }
+
+        .picture1-write {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .picture1-write h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .help-2 {
+            background-color: #606060;
+            box-sizing: border-box;
+            padding-top: 5px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btn-cyan {
+            background-color: #03bebe;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-cyan:hover {
+            background-color: #03577b;
+            transform: scale(1.05);
+        }
     </style>
 
 </head>
 
 <body>
-    <div id="menu-placeholder"></div>
     <div class="top-nav">
         <div class="container">
             <a href="index.html" class="logo">
@@ -212,7 +281,7 @@
             <h4>Plug your company into a world-class digital product design team. Strategy, UX design, rapid prototyping
                 and more. In just 5 days.</h4>
             <br><br><br>
-            <button type="button" class="btn btn-danger">Book a free discovery call</button>
+            <button type="button" class="btn-mor">Book a free discovery call</button>
         </div>
         <div class="image">
             <img src="https://assets-global.website-files.com/60c37e187c48b358e8ea00c5/633ff3df3e4e6065bf394939_hero-p-500.png"
@@ -220,8 +289,72 @@
         </div>
     </div>
 
+    <div class="help">
+        <div class="text-content1">
+            <div class="small-text1">
+                How We Can Help
+            </div>
+            <div class="big-text1">
+                What challenges are you facing?
+            </div>
+            <br><br>
+            <h4>We work with the world’s top brands and ambitious startups to prototype the future today.</h4>
+            <br><br>
+            <h4>Whether you need to create a new product from scratch, improve an existing product or inject some
+                innovation into your design team, we can help.</h4>
+
+            <br><br><br><br><br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="https://assets-global.website-files.com/60c37e187c48b358e8ea00c5/6448f0f1006ce06549b0968d_validate.svg"
+                            alt="">
+                        <div class="picture1-write">
+                            <h2>Validate <br>a new idea</h2>
+                            <br>
+                            <p>Validate and test new ideas using interactive prototypes.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://assets-global.website-files.com/60c37e187c48b358e8ea00c5/6448f0f054c516785a4778b1_improve.svg"
+                            alt="">
+                        <div class="picture1-write">
+                            <h2>Improve <br>an existing product</h2>
+                            <br>
+                            <p>Re-energise your product and team in just 5 days</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://assets-global.website-files.com/60c37e187c48b358e8ea00c5/6448f0f08eb56dea2683d841_new%20product.svg"
+                            alt="">
+                        <div class="picture1-write">
+                            <h2>Design <br>
+                                a new product</h2>
+                            <br>
+                            <p>Take your idea from concept to MVP in weeks,
+                                not months</p>
+                            <br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help-2">
+                <br><br><br>
+                <h1 style="color:#ffffff">5-Day UX Sprints</h1>
+                <br>
+                <h3 style="color:#ffffff">Napkin to fully-implementable designs in 5 days</h3>
+                <br><br>
+                <button type="button" class="btn-cyan">The 5-day UX Sprint</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
 
 
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -229,8 +362,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-
-    <script src="scripts.js"></script>
 </body>
 
 </html>
