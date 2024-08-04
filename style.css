@@ -1,0 +1,463 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    /* veya scroll */
+
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.top-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.top-nav .logo img {
+    height: 45px;
+    width: auto;
+}
+
+.top-nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.top-nav .nav-links li {
+    margin: 0;
+    position: relative;
+}
+
+.top-nav .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 300ms;
+    position: relative;
+}
+
+.top-nav .nav-links a:hover {
+    color: #800080;
+}
+
+.top-nav .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #800080;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.top-nav .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    padding: 0 10px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    height: 100vh;
+}
+
+.product .text-content {
+    max-width: 50%;
+    padding-right: 50px;
+}
+
+.product .text-content .big-text {
+    font-size: 65px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+    margin: 20px 0;
+    padding: 0;
+    margin-left: 3px;
+}
+
+.product .text-content .small-text {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 3px;
+    padding: 0;
+}
+
+.product .image {
+    max-width: 50%;
+    text-align: right;
+}
+
+.product .image img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-mor {
+    background-color: #800080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-mor:hover {
+    background-color: #6a0dad;
+    transform: scale(1.05);
+}
+
+.help {
+    background-color: #c0c0c0;
+    width: 100%;
+    height: 240vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 50px 0;
+    text-align: left;
+}
+
+.text-content1 {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-content1 .big-text1 {
+    font-size: 65px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+    margin: 30px 0;
+}
+
+.text-content1 .small-text1 {
+    font-size: 30px;
+    margin-top: -300px;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.help .row img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    padding: 80px;
+}
+
+.picture1-write {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.picture1-write h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.help-2 {
+    background-color: #606060;
+    box-sizing: border-box;
+    padding-top: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-cyan {
+    background-color: #03bebe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cyan:hover {
+    background-color: #03577b;
+    transform: scale(1.05);
+}
+
+.results {
+    background-color: #ffffff;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 50px 0;
+    text-align: left;
+}
+
+.btn-darkblue {
+    background-color: #0022e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-darkblue:hover {
+    background-color: #160268;
+    transform: scale(1.05);
+}
+
+/* Menü görünümüne yönelik stil */
+.top-nav {
+    background-color: #ffffff;
+    color: #000;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* Açılma ve kapanma geçiş süreleri */
+}
+
+/* Menü gizlendiğinde */
+.top-nav.hidden {
+    transform: translateY(-100%);
+    /* Menü yukarı kaydırılır */
+    opacity: 0;
+    /* Menü şeffaf hale gelir */
+}
+
+.ads-pictures-container {
+    display: flex;
+    align-items: flex-start; /* Yazıları yukarıdan başlatır */
+    justify-content: space-between; /* Alanı eşit olarak dağıtır */
+    width: calc(100% - 650px); /* Sağ taraftan 300px boşluk bırakır */
+    height: 400px; /* Yüksekliği 375px yapar */
+    padding: 20px;
+    background-color: #2b2988;
+    color: white;
+    box-sizing: border-box; /* Padding ve margin'in boyuta dahil edilmesini sağlar */
+    margin-left: auto; /* Sol taraftan otomatik boşluk bırakır */
+    margin-right: auto; /* Sağ taraftan otomatik boşluk bırakır */
+    border-radius: 30px;
+}
+
+.left-text {
+    max-width: 275px; /* Sol yazı için genişlik ayarı */
+    color: white; /* Yazı rengini beyaz yapar */
+    font-size: 1.5rem; /* Yazı boyutunu ayarlar */
+    line-height: 1.4; /* Satır yüksekliğini ayarlar */
+    display: flex;
+    flex-direction: column; /* Başlıkları ve metinleri dikey olarak hizalar */
+    align-items: flex-start; /* Sol tarafa hizalar */
+    justify-content: flex-start; /* İçerikleri yukarıdan başlatır */
+    margin-right: 60px; /* Yazılar ve görsel arasındaki boşluğu artırır */
+}
+
+.left-text h4 {
+    margin: 0; /* H4 başlığının üst ve alt boşluklarını sıfırlar */
+    font-size: 1.2rem; /* H4 başlık boyutu */
+}
+
+.left-text h1 {
+    margin: 0; /* H1 başlığının üst ve alt boşluklarını sıfırlar */
+    font-size: 2rem; /* H1 başlık boyutu */
+    line-height: 1.2; /* Satır yüksekliği */
+}
+
+.left-text h6 {
+    margin: 0; /* H6 başlıklarının üst ve alt boşluklarını sıfırlar */
+    font-size: 0.9rem; /* H6 başlık boyutu */
+    line-height: 1.5; /* Satır yüksekliği */
+    margin-bottom: 10px; /* H6 başlıklarının alt boşluğunu azaltır */
+}
+
+.ads-pictures {
+    display: flex;
+    align-items: flex-start; /* Görseli yukarıdan başlatır */
+    flex: 1; /* Tablo alanını genişletir */
+    margin-left: 20px; /* Görselin sol tarafında boşluk bırakır */
+}
+
+.ads-pictures img {
+    max-width: 550px; /* Görselin genişliğini ayarlar */
+    height: auto; /* Yüksekliği orantılı olarak ayarlar */
+    margin-top: 10px; /* Görselin üst tarafında boşluk bırakır */
+    object-fit: cover; /* Görselin kapsayıcıya uygun şekilde kesilmesini sağlar */
+}
+
+.ads-pictures-container1 {
+    display: flex;
+    align-items: flex-start; /* Yazıları yukarıdan başlatır */
+    justify-content: space-between; /* Alanı eşit olarak dağıtır */
+    width: calc(100% - 650px); /* Sağ taraftan 300px boşluk bırakır */
+    height: 555px; /* Yüksekliği 375px yapar */
+    padding: 20px;
+    background-color: #2b2988;
+    color: white;
+    box-sizing: border-box; /* Padding ve margin'in boyuta dahil edilmesini sağlar */
+    margin-left: auto; /* Sol taraftan otomatik boşluk bırakır */
+    margin-right: auto; /* Sağ taraftan otomatik boşluk bırakır */
+    border-radius: 30px;
+}
+
+.container2 img {
+    margin-left: 160px; /* Görseli sağa 30 px kaydırır */
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Görsel ve yazılar için iki sütun */
+    gap: 70px; /* Görsel ile yazılar arasına boşluk ekler */
+    align-items: center; /* Yükseklik boyunca ortalamak için */
+    height: 150vh;
+    margin-top: -550px; /* Üst boşluğu azaltarak iki satırı yaklaştırır */
+}
+
+.container2 img {
+    max-width: 100%; /* Görselin genişliği taşmasın diye */
+}
+
+.text-container h1 {
+    margin: 0; /* Başlık için varsayılan margin'i sıfırla */
+}
+
+.text-container p {
+    margin: 0; /* Paragraf için varsayılan margin'i sıfırla */
+}
+
+.list {
+    list-style: none; /* Varsayılan liste işaretlerini kaldır */
+    padding: 0;
+}
+.list li {
+    position: relative;
+    padding-left: 25px; /* Ok simgesinin yerleşmesi için boşluk bırak */
+}
+.list li::before {
+    content: '\f0da'; /* Font Awesome ok simgesi */
+    font-family: 'Font Awesome 6 Free'; /* Font Awesome font ailesi */
+    font-weight: 900; /* Font Awesome ikonu kalın gösterir */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px; /* Ok simgesinin boyutu */
+    color: #000; /* Ok simgesinin rengi */
+}
+
+/* Genel Stil */
+/* Genel Stil */
+.text-container h1, .text-container p, .text-container ul,
+.text-container-alternativ h1, .text-container-alternativ p, .text-container-alternativ ul {
+    margin: 0;
+    padding: 0;
+}
+
+.text-container ul, .text-container-alternativ ul {
+    list-style: none; /* Liste işaretlerini kaldır */
+    padding-left: 0;
+}
+
+.text-container ul li, .text-container-alternativ ul li {
+    position: relative;
+    padding-left: 20px; /* Liste işaretleri için boşluk bırak */
+}
+
+.text-container ul li::before, .text-container-alternativ ul li::before {
+    content: '→'; /* Küçük ok simgesi */
+    position: absolute;
+    left: 0;
+    color: #000; /* Ok simgesinin rengi */
+}
+
+/* İlk düzenleme - solda görsel, sağda yazılar */
+.container2-alternativ {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Görsel ve yazılar için iki sütun */
+    gap: 20px; /* Görsel ile yazılar arasına boşluk ekler */
+    align-items: center; /* Yükseklik boyunca ortalamak için */
+    height: 150vh;
+    margin: 30px;
+}
+
+.container2 img {
+    margin-left: 150px; /* Görseli sağa 200 px kaydırır */
+    max-width: 100%; /* Görselin genişliği taşmasın diye */
+}
+
+.text-container-alternativ {
+    margin-left: 275px; /* Yazıları sağa 100 px kaydırır */
+}
+
+.text-container h1, .text-container p {
+    margin: 0; /* Başlık ve paragraf için varsayılan margin'i sıfırla */
+}
+
+/* İkinci düzenleme - sağda görsel, solda yazılar */
+.container2-alternativ {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Yazılar ve görsel için iki sütun, görsel sağda */
+    gap: 5px; /* Yazılar ile görsel arasına boşluk ekler */
+    align-items: center; /* Yükseklik boyunca ortalamak için */
+    margin-top: -550px; /* Üst boşluğu azaltarak iki satırı yaklaştırır */
+}
+
+.container2-alternativ img {
+    margin-right: 160px; /* Görseli sola 160 px kaydırır */
+    max-width: 100%; /* Görselin genişliği taşmasın diye */
+}
+
+.text-container-alternativ {
+    margin-right: 100px; /* Yazıları sağa 100 px kaydırır */
+}
