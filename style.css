@@ -461,3 +461,101 @@ body {
 .text-container-alternativ {
     margin-right: 100px; /* Yazıları sağa 100 px kaydırır */
 }
+
+footer {
+    background-color: #999999; /* Footer arka plan rengi gri */
+    padding: 20px;
+    color: #ffffff; /* Genel yazı rengi beyaz */
+}
+
+/* Tablo Arka Plan Rengi ve Stil */
+footer table {
+    background-color: #000000; /* Tablo arka plan rengi siyah */
+    color: #ffffff; /* Tablo içindeki yazı rengi beyaz */
+    border-collapse: collapse; /* Tablo kenar boşluklarını kaldırır */
+    width: 100%; /* Tablo genişliği yüzde 100 */
+    margin-top: 20px; /* Üstten boşluk */
+}
+
+footer table th, 
+footer table td {
+    border: 1px solid #444; /* Hücre kenarları koyu gri */
+    padding: 15px; /* Hücre içi boşluk */
+}
+
+footer table th {
+    background-color: #333; /* Başlık hücrelerinin arka plan rengi koyu gri */
+    color: #ffffff; /* Başlık yazı rengi beyaz */
+}
+
+footer table tr:nth-child(even) {
+    background-color: #111; /* Çift sıraların arka plan rengi daha koyu siyah */
+}
+
+footer table tr:nth-child(odd) {
+    background-color: #000; /* Tek sıraların arka plan rengi siyah */
+}
+
+/* Logo Büyütme */
+.footer-logo {
+    text-align: left; /* Logoyu sola hizalar */
+    margin-bottom: 20px; /* Logo altına boşluk ekler */
+}
+
+.footer-logo img {
+    height: 120px; /* Logo yüksekliği */
+}
+
+/* Sosyal Medya Logolarını Daire İçine Alma ve Sol Hizalama */
+.footer-social-media {
+    text-align: left; /* Sosyal medya simgelerini sola hizalar */
+}
+
+.footer-social-media ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0; /* Liste içi boşlukları sıfırlar */
+}
+
+.footer-social-media ul li {
+    display: inline-block; /* Liste öğelerini yatay olarak hizalar */
+    margin-right: 10px; /* Sağ boşluk ekler */
+}
+
+.footer-social-media a {
+    text-decoration: none;
+    display: inline-block;
+    width: 50px; /* Sosyal medya simgesi genişliği */
+    height: 50px; /* Sosyal medya simgesi yüksekliği */
+    line-height: 50px; /* Simgelerin dikey hizalaması için */
+    border-radius: 50%; /* Daire şekli */
+    background-color: #d9d7d7; /* Arka plan rengi */
+    text-align: center;
+    color: #ffffff; /* Simgelerin varsayılan rengi beyaz */
+    font-size: 24px; /* Simgelerin boyutu */
+}
+
+.footer-social-media a:hover {
+    background-color: #444; /* Hover durumunda arka plan rengi */
+    text-decoration: underline; /* Hover durumunda alt çizgi */
+}
+
+/* Instagram ve LinkedIn için özel renkler */
+.footer-social-media a.instagram {
+    color: #b20a0a; /* Instagram simgesi rengi kırmızı */
+}
+
+.footer-social-media a.linkedin {
+    color: #041471; /* LinkedIn simgesi rengi koyu mavi */
+}
+
+/* Telif Hakkı Stili */
+.footer-copyright {
+    background-color: #999999; /* Telif hakkı arka plan rengi gri */
+    padding: 10px 0;
+}
+
+.footer-copyright .text-color-light {
+    color: #D7D6D2; /* Telif hakkı metni rengi açık gri */
+}
+
