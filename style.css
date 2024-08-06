@@ -569,7 +569,7 @@ footer table tr:nth-child(odd) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 90vh;
+    height: 100vh;
 }
 
 .text-content {
