@@ -559,3 +559,38 @@ footer table tr:nth-child(odd) {
     color: #D7D6D2; /* Telif hakkı metni rengi açık gri */
 }
 
+.Capabilities {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 70vh;
+}
+
+.text-content {
+    max-width: 60%;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.headings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.heading {
+    margin-right: 10px;
+}
+
+.heading:last-child {
+    margin-right: 0;
+}
